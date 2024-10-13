@@ -1,0 +1,12 @@
+{
+	"name": "Ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"1dot75cm.RPMSpec",
+				"nico-castell.linux-desktop-file"
+			]
+		}
+	}
+}
