@@ -25,6 +25,12 @@ BuildRequires:  desktop-file-utils
 %description
 The essential tools for any Java developer, including a Java IDE, a CVS client, Git client, XML Editor, Mylyn, Maven integration and WindowBuilder
 
+%package
+Summary:        Metapackage for Eclipse
+Requires:       eclipse-java
+Requires:       eclipse-jee
+Requires:       eclipse-cpp
+
 %package java
 Summary:        Highly extensible IDE (Java version)
 
