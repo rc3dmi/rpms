@@ -4,7 +4,7 @@
 %define name eclipse-java
 %define exclusivearch x86_64
 %define rel 2024-09/R
-%define reldash %{lua:string.gsub("%{rel}", "/", "-")}
+%define reldash 2024-09-R
 %define srcfilename %{name}-%{reldash}-linux-gtk-%{exclusivearch}.tar.gz
 
 %define _eclipsedir %{_libdir}/%{name}
