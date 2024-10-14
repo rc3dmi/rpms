@@ -39,7 +39,7 @@ cp -r eclipse %{buildroot}%{_eclipsedir}
 install -d %{buildroot}%{_bindir}
 ln -s "$(realpath -m --relative-to %{_bindir}/%{name} %{_libdir}/%{name}/eclipse)" %{buildroot}%{_bindir}/%{name}
 
-install -Dm644 %{SOURCE10} %{buildroot}{%_datadir}/applications/%{name}.desktop
+install -Dm644 %{SOURCE10} %{buildroot}%{_datadir}/applications/%{name}.desktop
 desktop-file-edit \
   --set-name="Eclipse (Java)" \
   --set-comment="Java development environment" \
