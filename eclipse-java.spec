@@ -65,6 +65,9 @@ find %{buildroot}%{_eclipsedir}/plugins/com.sun.jna_5.13.0.v20230812-1000/com/su
 * Mon Dec 09 2024 Dušan Simić <dusan.simic1810@gmail.com> 4.33-1
 - new package built with tito
 
+* Mon Dec 09 2024 Dušan Simić <dusan.simic1810@gmail.com> 4.33-1
+- new package built with tito
+
 * Mon Oct 14 2024 dusansimic <dusan.simic@dmi.uns.ac.rs> - 4.33-1
 - Release 4.33
 - Modify for use in computer lab
