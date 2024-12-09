@@ -17,7 +17,7 @@ Summary:        Highly extensible IDE (Java version)
 License:        EPL
 URL:            https://www.eclipse.org
 Source0:        %{url}/downloads/download.php?file=/technology/epp/downloads/release/%{rel}/%{srcfilename}&r=1#/%{name}-%{version}.tar.gz
-Source10:       eclipse.desktop
+Source10:       src/eclipse.desktop
 
 ExclusiveArch:  %{exclusivearch}
 Requires:       java
