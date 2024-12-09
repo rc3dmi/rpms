@@ -4,3 +4,6 @@ tagger = tito.tagger.VersionTagger
 changelog_do_not_remove_cherrypick = 0
 changelog_format = %s (%ae)
 
+[eclipse-java]
+spec_file = eclipse-java.spec
+builder = rpmbuild
