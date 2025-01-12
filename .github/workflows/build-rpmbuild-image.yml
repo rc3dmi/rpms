@@ -4,7 +4,6 @@ on:
   schedule:
     - cron: "0 7 * * *" # 07:00 UTC every day
   workflow_dispatch:
-  push: # TODO: Remove once finished
 
 env:
   IMAGE_NAME: rpm-build
