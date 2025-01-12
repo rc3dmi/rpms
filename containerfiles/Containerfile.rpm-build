@@ -1,5 +1,5 @@
 FROM registry.fedoraproject.org/fedora:latest
 
 RUN \
-  dnf install --disablerepo='*' --enablerepo='fedora,updates' --setopt install_weak_deps=0 --nodocs --assumeyes rpm-build rpmdevtools systemd-rpm-macros && \
+  dnf install --disablerepo='*' --enablerepo='fedora,updates' --setopt install_weak_deps=0 --nodocs --assumeyes rpm-build rpmdevtools systemd-rpm-macros dnf-plugins-core && \
   dnf clean all
