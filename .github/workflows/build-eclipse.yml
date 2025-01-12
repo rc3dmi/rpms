@@ -1,0 +1,14 @@
+name: Eclipse build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build and push image
+    uses: ./.github/workflows/reusable-build.yml
+    secrets: inherit
+    strategy:
+      fail-fast: false
+    with:
+      image_name: eclipse

@@ -1,0 +1,13 @@
+FROM scratch AS ctx
+COPY / /
+
+FROM ghcr.io/rc3dmi/rpms/rpm-build:latest as build
+
+RUN \
+  --mount=type=bind,from=ctx,src=/,dst=/ctx \
+  /ctx/scripts/build-eclipse.sh
+
+FROM scratch
+
+COPY --from=build /root/rpmbuild/RPMS/* /rpms
+COPY --from=build /root/rpmbuild/SRPMS/* /srpms
