@@ -16,3 +16,6 @@ dnf --nodocs --assumeyes builddep ~/rpmbuild/SPECS/jee.spec
 
 rpmbuild -ba ~/rpmbuild/SPECS/java.spec
 rpmbuild -ba ~/rpmbuild/SPECS/jee.spec
+
+ls -l ~/rpmbuild/RPMS
+ls -l ~/rpmbuild/SRPMS
