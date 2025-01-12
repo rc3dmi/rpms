@@ -7,6 +7,14 @@ on:
         description: "The image name"
         required: true
         type: string
+      fedora_release:
+        description: "Fedora release for building packages"
+        required: true
+        type: string
+      build_package:
+        description: "Wether this workflow builds a package"
+        required: true
+        type: boolean
 
 env:
   IMAGE_NAME: ${{ inputs.image_name }}
@@ -29,7 +37,13 @@ jobs:
         id: generate-tags
         shell: bash
         run: |
-          echo "latest=latest" >> $GITHUB_OUTPUT
+          if [ "${{ inputs.build_package }}" = "true" ]
+          then
+            image_tags="$(just generate-package-tags ${{ inputs.fedora_release }} ${{ inputs.image_name }})"
+          else
+            image_tags="$(just generate-tags ${{ inputs.fedora_release }})"
+          fi
+          echo "image_tags=${image_tags}" >> $GITHUB_OUTPUT
 
       # Build image using Buildah action
       - name: Build Image
@@ -39,8 +53,7 @@ jobs:
           containerfiles: |
             ./containerfiles/Containerfile.${{ env.IMAGE_NAME }}
           image: ${{ env.IMAGE_NAME }}
-          tags: |
-            ${{ steps.generate-tags.outputs.latest }}
+          tags: ${{ steps.generate-tags.outputs.image_tags }}
           oci: true
 
       # Push the image to GHCR (Image Registry)

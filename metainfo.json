@@ -1,0 +1,14 @@
+{
+  "fedora_releases": {
+    "latest": "41",
+    "next": "42"
+  },
+  "packages": {
+    "eclipse": {
+      "version": "4.33"
+    },
+    "jetbrains-intellij-idea-ultimate": {
+      "version": "2024.3.1.1"
+    }
+  }
+}

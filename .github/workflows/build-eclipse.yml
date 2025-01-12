@@ -14,5 +14,9 @@ jobs:
     secrets: inherit
     strategy:
       fail-fast: false
+      matrix:
+        fedora_release: [41, 42]
     with:
       image_name: eclipse
+      fedora_release: ${{ matrix.fedora_release }}
+      build_package: true

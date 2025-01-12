@@ -16,5 +16,9 @@ jobs:
     secrets: inherit
     strategy:
       fail-fast: false
+      matrix:
+        fedora_release: [41, 42]
     with:
       image_name: rpm-build
+      fedora_release: ${{ matrix.fedora_release }}
+      build_package: false
