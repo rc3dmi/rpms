@@ -6,6 +6,10 @@ on:
 jobs:
   build:
     name: Build and push image
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
     uses: ./.github/workflows/reusable-build.yml
     secrets: inherit
     strategy:
