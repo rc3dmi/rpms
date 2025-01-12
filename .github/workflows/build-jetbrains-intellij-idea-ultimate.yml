@@ -17,6 +17,6 @@ jobs:
       matrix:
         fedora_release: [41, 42]
     with:
-      image_name: eclipse
+      image_name: jetbrains-intellij-idea-ultimate
       fedora_release: ${{ matrix.fedora_release }}
       build_package: true
