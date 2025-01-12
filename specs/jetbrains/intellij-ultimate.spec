@@ -1,4 +1,5 @@
 %global debug_package %{nil}
+%define __brp_check_rpaths %{nil}
 
 %define name jetbrains-intellij-idea-ultimate
 %define exclusivearch x86_64
