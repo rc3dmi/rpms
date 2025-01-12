@@ -2,5 +2,5 @@ ARG FEDORA_RELEASE
 FROM registry.fedoraproject.org/fedora:${FEDORA_RELEASE}
 
 RUN \
-  dnf install --disablerepo='*' --enablerepo='fedora,updates' --setopt install_weak_deps=0 --nodocs --assumeyes rpm-build rpmdevtools systemd-rpm-macros dnf-plugins-core && \
+  dnf install --disablerepo='*' --enablerepo='fedora,updates' --setopt install_weak_deps=0 --nodocs --assumeyes rpm-build rpmdevtools systemd-rpm-macros dnf-plugins-core tree && \
   dnf clean all
