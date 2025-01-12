@@ -5,7 +5,9 @@
 		"vscode": {
 			"extensions": [
 				"1dot75cm.RPMSpec",
-				"nico-castell.linux-desktop-file"
+				"nico-castell.linux-desktop-file",
+				"github.vscode-github-actions",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	}
