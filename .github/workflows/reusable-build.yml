@@ -63,6 +63,8 @@ jobs:
           image: ${{ env.IMAGE_NAME }}
           tags: ${{ steps.generate-tags.outputs.image_tags }}
           oci: true
+          build-args: |
+            FEDORA_RELEASE=${{ inputs.fedora_release }}
 
       # Push the image to GHCR (Image Registry)
       - name: Push To GHCR
