@@ -54,7 +54,7 @@ install -Dm644 idea-IU-*/bin/idea.svg %{buildroot}%{_datadir}/icons/hicolor/scal
 %{_ideadir}
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/icons/hicolor/scalable/apps/%{name}.png
+%{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
 
 %changelog
 * Sun Jan 12 2025 dusansimic <dusan.simic1810@gmail.com> - 2024.2.3
