@@ -1,3 +1,13 @@
+check:
+  #!/bin/bash
+  find . -type f -name "*.just" | while read -r file
+  do
+    echo "Checking syntax: $file"
+    just --unstable --fmt --check -f $file
+  done
+  echo "Checking syntax: Justfile"
+  just --unstable --fmt --check -f Justfile
+
 generate-tags fedora_release="":
   #!/bin/bash
   set -eoux pipefail
