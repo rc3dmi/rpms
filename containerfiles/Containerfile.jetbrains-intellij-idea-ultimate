@@ -1,0 +1,14 @@
+ARG FEDORA_RELEASE
+FROM scratch AS ctx
+COPY / /
+
+FROM ghcr.io/rc3dmi/rpms/rpm-build:${FEDORA_RELEASE} AS build
+
+RUN \
+  --mount=type=bind,from=ctx,src=/,dst=/ctx \
+  /ctx/scripts/build-jetbrains-intellij-idea-ultimate.sh
+
+FROM scratch
+
+COPY --from=build /root/rpmbuild/RPMS/* /rpms
+COPY --from=build /root/rpmbuild/SRPMS/* /srpms

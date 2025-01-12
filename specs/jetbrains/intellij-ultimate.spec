@@ -2,7 +2,7 @@
 
 %define name jetbrains-intellij-idea-ultimate
 %define exclusivearch x86_64
-%define rel 2024.3.1.1
+%define rel 2024.2.3
 %define srcfilename ideaIU-%{rel}.tar.gz
 
 %define _ideadir %{_libdir}/%{name}
@@ -56,5 +56,5 @@ install -Dm644 idea-IU-*/bin/idea.svg %{buildroot}%{_datadir}/icons/hicolor/scal
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.png
 
 %changelog
-* Sun Jan 12 2025 dusansimic <dusan.simic1810@gmail.com> - 2024.3.1.1
-- Release 2024.3.1.1
+* Sun Jan 12 2025 dusansimic <dusan.simic1810@gmail.com> - 2024.2.3
+- Release 2024.2.3
