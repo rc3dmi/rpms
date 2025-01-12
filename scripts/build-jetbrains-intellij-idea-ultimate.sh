@@ -12,7 +12,7 @@ tree ~/rpmbuild/SOURCES
 
 dnf --nodocs --assumeyes builddep ~/rpmbuild/SPECS/intellij-ultimate.spec
 
-rpmbuild -ba ~/rpmbuild/SPECS/intellij-ultimate.spec
+QA_RPATHS=$(( 0x0004|0x0008 )) rpmbuild -ba ~/rpmbuild/SPECS/intellij-ultimate.spec
 
 tree ~/rpmbuild/RPMS
 tree ~/rpmbuild/SRPMS
