@@ -47,7 +47,7 @@ desktop-file-edit \
   --set-key=Exec \
   --set-value=%{name} \
   %{buildroot}%{_datadir}/applications/%{name}.desktop
-desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
+desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 for i in 16 22 24 32 48 64 128 256 512 1024 ; do
   install -Dm644 eclipse/plugins/org.eclipse.platform_%{version}*/"eclipse$i.png" "%{buildroot}%{_datadir}/icons/hicolor/${i}x${i}/apps/%{name}.png"
