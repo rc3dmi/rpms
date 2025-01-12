@@ -1,5 +1,5 @@
 %global debug_package %{nil}
-%global __brp_add_determinism %{nil}
+%undefine __brp_add_determinism
 
 %define name jetbrains-intellij-idea-ultimate
 %define exclusivearch x86_64
