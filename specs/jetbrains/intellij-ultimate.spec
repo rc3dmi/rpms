@@ -1,6 +1,7 @@
 %global debug_package %{nil}
 %global __jar_repack 0
 %global __brp_check_jars %{nil}
+%global __brp_add_determinism %{nil}
 
 %define name jetbrains-intellij-idea-ultimate
 %define exclusivearch x86_64
