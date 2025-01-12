@@ -33,6 +33,14 @@ jobs:
       - name: Checkout Push to Registry action
         uses: actions/checkout@v4
 
+      - name: Install Just
+        shell: bash
+        run: bash .github/workflows/shared/install-just.sh
+
+      - name: Check Just Syntax
+        shell: bash
+        run: just check
+
       - name: Generate tags
         id: generate-tags
         shell: bash
